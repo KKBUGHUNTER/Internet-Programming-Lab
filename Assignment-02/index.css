@@ -76,9 +76,107 @@ nav a:hover {
 .main .mainmaster a:hover{
     background-color: red;
 }
-.about{
+.about, .indexing, .committee{
     background-color: white;
     padding-left: 10%;
     padding-right: 10%;
     text-justify: baseline;
 }
+
+.about .orgabout h2, .indexing h2, .committee h2{
+    display: grid ;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: darkblue;
+}
+.orgabout p{
+    display: grid ;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.about .orgabout figure{
+    vertical-align: middle;
+}.about .orgabout img{
+    height: 80;
+    width: 200;
+}
+.about .orgabout figcaption{
+    font-size: 18;
+    font-weight: bold;
+    text-align: center;
+}
+.logoset1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logoset2{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aboutcontent{
+    display: block;
+    align-items: start;
+    font-size: 20px;
+margin-bottom: 10px;
+text-align: justify;
+}
+.aboutcontent h4, p, .indexing{
+    padding-top: 2%;
+}
+.big{
+    font-size: larger;
+}
+.listindex{
+    margin-left: 50px;
+    margin-top: 10px
+}
+
+/* Committee Design */
+
+.committee{
+    padding-top: 30px;
+}
+.committee img{
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+.teammembers{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* proper box Design for profile box */
+.teammember { 
+    width: 300px;
+    margin: 10px; 
+    text-align: center;
+    box-sizing: border-box; 
+}
+.teammember em{
+    color: red;
+}
+.teammember small{
+    align-items: center;
+}
+
+/* Committee Design */
+
+.committeecontent{
+    display: flex;
+    width: 100%;
+}
+.committeecontent div{
+    width: 350px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.committee p{
+    padding-left: 20%;
+}
+
