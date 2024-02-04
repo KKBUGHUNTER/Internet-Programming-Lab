@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+}
+body{
+    background-image: url('images/background.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+}
+.masterclass{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: rgba(17, 17, 99, 0.164);
+    position: fixed;
+    width: 100%;
+}
+
+nav {
+    display: inline;
+}
+
+nav a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+.main{
+    height: 100%;
+}
+.main .mainmaster{
+    height: 100%;
+    background-color: rgba(17, 17, 99, 0.568);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.main .mainmaster h1{
+    font-size: 350%;
+    padding-bottom: 3%;
+    color: white;
+}
+.main .mainmaster h3{
+    font-size: 150%;
+    color: white;
+    padding-bottom: 3%;
+}
+.main .mainmaster h4{
+    font-size: 125%;
+    color: white;
+}
+.main .mainmaster p{
+    font-size: 125%;
+    color: white;
+}
+.main .mainmaster a{
+    padding: 1.5%;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    border: 3px solid red;
+    border-radius: 30px;
+}
+.main .mainmaster a:hover{
+    background-color: red;
+}
+.about{
+    background-color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-justify: baseline;
+}
