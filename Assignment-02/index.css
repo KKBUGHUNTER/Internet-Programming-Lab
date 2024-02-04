@@ -5,6 +5,7 @@
 html,body{
     height: 100%;
 }
+
 body{
     background-image: url('images/background.jpeg');
     background-size: cover;
@@ -76,14 +77,14 @@ nav a:hover {
 .main .mainmaster a:hover{
     background-color: red;
 }
-.about, .indexing, .committee{
+.about, .indexing, .committee, .speakers, .callForPapers, .contact{
     background-color: white;
     padding-left: 10%;
     padding-right: 10%;
     text-justify: baseline;
 }
 
-.about .orgabout h2, .indexing h2, .committee h2{
+.about .orgabout h2, .indexing h2, .committee h2, .speakers h2, .callForPapers h2, .contact h2{
     display: grid ;
     align-items: center;
     justify-content: center;
@@ -118,12 +119,12 @@ nav a:hover {
     margin-right: auto;
 }
 
-.aboutcontent{
+.aboutcontent, .callForPapers p {
     display: block;
     align-items: start;
     font-size: 20px;
-margin-bottom: 10px;
-text-align: justify;
+    margin-bottom: 10px;
+    text-align: justify;
 }
 .aboutcontent h4, p, .indexing{
     padding-top: 2%;
@@ -141,7 +142,7 @@ text-align: justify;
 .committee{
     padding-top: 30px;
 }
-.committee img{
+.committee img, .speakers img{
     border-radius: 50%;
     display: block;
     margin: 0 auto;
@@ -180,3 +181,35 @@ text-align: justify;
     padding-left: 20%;
 }
 
+/* speakers Design */
+.speakers{
+    padding-top: 30px;
+}
+
+/* Call for Papers */
+.callForPapers b{
+    color: red;
+}
+table{
+    border-collapse: collapse;
+    border-color: blue;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+th, td{
+    padding: 10px;
+}
+th{
+    background-color: blue;
+    color: white;
+}
+
+.footer {
+    display: block;
+    background: #112363;
+    padding: 25px;
+    color: #eee;
+    font-size: 14px;
+}
