@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        .div1 {
+            border: 5px dotted blue;
+            height: 97%;
+        }
+
+        .div1-1 {
+            border: 5px dotted red;
+            height: 84%;
+            margin: 50px;
+        }
+
+        .div1-2 {
+            border: 5px;
+            border-style: solid;
+            border-color: pink;
+            height: 40%;
+            margin: 50px;
+        }
+
+        .bg-y {
+            background-color: yellow;
+        }
+
+        .box0 {
+            background-color: yellow;
+            border: 5px dotted blue;
+            position: absolute;
+            z-index: 1;
+            height: 50px;
+            width: 50px;
+            left: 100px;
+        }
+
+        .box1 {
+            background-color: yellow;
+            border: 5px dotted red;
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            z-index: 2;
+            left: 170px;
+        }
+
+        .box2 {
+            background-color: yellow;
+            border: 5px dotted blue;
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            z-index: 3;
+            left: 240px;
+        }
+
+        .box3 {
+            background-color: yellow;
+            border: 5px dotted red;
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            z-index: 4;
+            left: 310px;
+        }
+    </style>
+    <title>CSS Practice Q3</title>
+</head>
+
+<body>
+    <div class="div1">
+        <div class="div1-1">
+            <div class="div1-2">
+                <div class="bg-y" style="border: 5px dotted green; height:10%; margin:10px;"></div>
+                <div class="bg-y" style="border: 5px dotted orange; height:10%; margin:10px;"></div>
+                <div class="bg-y" style="border: 5px dotted red; height:10%; margin:10px;"></div>
+            </div>
+            <div style="padding-left:100px;">
+                <div class="box0"></div>
+                <div class="box1"></div>
+                <div class="box2"></div>
+                <div class="box3"></div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

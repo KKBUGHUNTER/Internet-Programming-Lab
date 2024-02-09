@@ -1,0 +1,24 @@
+
+*{ 
+    font-family: monospace; 
+ } 
+p{  
+    font-size:x-large; 
+    background-color: lime; 
+} 
+a:link{color:black;} 
+a:visited{color:yellow;} 
+a:hover{color:blue;} 
+a:active{color:red;} 
+#p2 
+{  
+  color:yellow 
+} 
+#box 
+{ 
+  background-color: white; 
+  border: 10px dotted blue; 
+  width:50%; 
+  padding: 20px; 
+  margin:30px 20px;   
+}
