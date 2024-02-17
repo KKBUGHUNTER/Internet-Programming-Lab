@@ -1,7 +1,5 @@
 function func1() {
     document.getElementById('heading').innerHTML = "welcome to JavaScript";
-    document.write("<br> <hr> ");
-    
 }
 
 function func2(){
