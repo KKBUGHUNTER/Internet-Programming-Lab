@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Web App</title>
+    <style>
+        body{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: lightcoral;
+        }
+        .content{
+            height: 70%;
+            width: 400px;
+            background-color: red;
+            padding: 5%;
+        }
+        h1{
+            text-align: center;
+        }
+        label{
+            padding: 10px;
+            display: block;
+        }
+        button{
+            margin-left: 35%;
+            padding: 4px 30px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <section class="content">
+        <h1>LOGIN</h1>
+        <form action="login" method="get">
+            <label for="name">Username: <input type="text" name="username"></label>
+            <label for="age">Password: <input type="text"  name="password"></label> 
+            <button type="submit">Login</button>
+        </form>
+    </section>
+</body>
+</html>
