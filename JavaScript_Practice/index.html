@@ -4,21 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js">
-
-    </script>
+    <script src="script.js"> </script>
     <title>JavaScript Practice</title>
 </head>
 
 <body>
-    <h1 id="heading">
-        Hello Welcome All!...
-    </h1>
-    <button type="button" onclick="func1()"> Click Me</button>
-    <button type="button" onclick="func2()"> Click Me to see alert box</button>
-
-    <img src="" alt="lignton">
     
+    <section>
+        <h1 id="heading"> Hello Welcome All!... </h1>
+        <button type="button" onclick="func1()"> Click Me</button> <br>
+        <button type="button" onclick="func2()"> Add 2 numbers</button> <br>
+        <img src="images/off.jpg" id="light" height="320px" onmouseover="lighton()" onmouseout="lightoff()">
+    </section>
+
+    <section>
+        <h1>Types of input Geting</h1>
+        <label for="name">Enter Yout Name: <input type="text" name="name" id="name"></label> <br>
+        <button onclick="printName(); lighton()">Submit</button>
+        <h2 id="content1"></h2>
+
+        <label for="deg">BE<input type="radio" name="deg" id="deg" value="BE"></label>
+        <label for="deg">ME<input type="radio" name="deg" id="deg" value="ME"></label>
+        <label for="deg">PHD<input type="radio" name="deg" id="deg" value="PHD"></label><br>
+        <button onclick="printDegree()">submit</button> <br>
+        <h2 id="content2"></h2>
+
+        <label for="coding">Coding<input type="checkbox" name="hobby"  value="Coding"></label>
+        <label for="music">Music<input type="checkbox" name="hobby" value="Music"></label>
+        <label for="playing">Playing<input type="checkbox" name="hobby" value="Playing"></label><br>
+        <button onclick="printHobby()">submit</button><br>
+        <h2 id="content3"></h2>
+        
+
+        <select name="books" id="book" onchange="printBookType()">
+            <option value="Horror">Horror</option>
+            <option value="Science Fiction">Science fiction</option>
+            <option value="Romance">Romance</option>
+            <option value="History">History</option>
+            <option value="Short Stories">Short Stories</option>
+        </select>
+        <h2 id="content4"></h2>
+
+
+    </section>
 </body>
 
 </html>
