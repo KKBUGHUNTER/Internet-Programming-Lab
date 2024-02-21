@@ -1,3 +1,54 @@
 *{
     margin: 0;
+    padding: 0;
+        box-sizing: border-box;
+        font-family: monospace;
+    }
+    
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: green;
+    }
+    
+    .container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        background: darkgreen;
+        padding: 40px 60px;
+    }
+    
+    h2 {
+        font-size: 3em;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+    
+    .reset {
+        padding: 15px 20px;
+        color: green;
+        background: white;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .reset:hover {
+        color: white;
+        background: green;
+    }
+    
+    .game {
+        width: 440px;
+        height: 440px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        transform-style: preserve-3d;
 }

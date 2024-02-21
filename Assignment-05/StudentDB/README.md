@@ -12,6 +12,11 @@
 
 3 directories, 7 files
 ```sql
+ USE authwebapp;
+
+```
+
+```sql
 CREATE TABLE myusers(
     username VARCHAR(255),
     passwd  VARCHAR(255)
