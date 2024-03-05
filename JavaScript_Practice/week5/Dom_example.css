@@ -1,0 +1,12 @@
+th{
+    background-color: gray;
+    color: yellow;
+}
+
+.happymouse {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: greenyellow;
+    border-radius: 50%;
+}

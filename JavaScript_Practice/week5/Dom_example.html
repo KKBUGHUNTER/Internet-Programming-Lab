@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="Dom_example.css">
+    <script src="Dom_example.js"></script>
+</head>
+
+<body onload="happyMouse()">
+    <h1>Example 01</h1>
+    <div class="content1">
+        <ol id="l1">
+            <li id="i1" onclick="swap_Item(this)">one</li>
+            <li id="i2" onclick="swap_Item(this)">three</li>
+            <li>four</li>
+        </ol>
+    </div>
+    <button type="submit" onclick="add_P_Tag()">add p tag</button> <br><br>
+    <button type="submit" onclick="add_Item()">add item</button> <br><br>
+    <button type="submit" onclick="remove_Item()">remove item</button> <br><br>
+    <button type="submit" onclick="replace_Item()">replace item</button> <br><br>
+    <hr>
+    <br>
+
+    <table border="1">
+        <tr><th id='th1' onmouseover="selected('th1')" onmouseout="selectOut('th1')">Create</th></tr>
+        <tr><th onmouseover="selected1(this)" onmouseout="selectOut1(this)">Read</th></tr>
+        <tr><th id='th2' onmouseover="selected('th2')" onmouseout="selectOut('th2')">Delete</th></tr>
+        <tr><th onmouseover="selected1(this)" onmouseout="selectOut1(this)">Exit</th></tr>
+        <tr><th id='th3' onmouseover="selected('th3')" onmouseout="selectOut('th3')">Update</th></tr>
+    </table>
+    <h1>Reload the activate <i>happyMouse</i></h1>
+</body>
+</html>
