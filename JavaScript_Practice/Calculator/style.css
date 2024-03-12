@@ -1,0 +1,35 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding-top: 3%;
+}
+
+.title, main{
+    text-align: center;
+}
+
+#display input{
+    width: 330px;
+    height: 50px;
+    font-size: 50px;
+    padding: 4px;
+    text-align: center;
+
+}
+#row1, #row2, #row3, #row4{
+    padding: 10px;
+}
+
+button{
+    height: 40px;
+    width: 40px;
+    padding: 3px;
+    margin: 25px;
+    background-color: gray;
+    font-weight: bolder;
+    font-size: larger;
+}

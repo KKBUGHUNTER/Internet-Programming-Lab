@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="title">Simple Calculator</h1>
+    </header>
+    <br><br>
+    <main>
+        <section id="display"><input type="text" name="result" id="result" disabled></section>
+        <section id="content">
+            <section id="row1">
+                <button onclick="getDisplay(1)">1</button>
+                <button onclick="getDisplay(2)">2</button>
+                <button onclick="getDisplay(3)">3</button>
+                <button onclick="getDisplay('+')">+</button>
+            </section>
+            <section id="row2">
+                <button onclick="getDisplay(4)">4</button>
+                <button onclick="getDisplay(5)">5</button>
+                <button onclick="getDisplay(6)">6</button>
+                <button onclick="getDisplay('-')">-</button>
+            </section>
+            <section id="row3">
+                <button onclick="getDisplay(7)">7</button>
+                <button onclick="getDisplay(8)">8</button>
+                <button onclick="getDisplay(9)">9</button>
+                <button onclick="getDisplay('x')">x</button>
+            </section>
+            <section id="row4">
+                <button onclick="getDisplay('C')">C</button>
+                <button onclick="getDisplay(0)">0</button>
+                <button onclick="getDisplay('=')">=</button>
+                <button onclick="getDisplay('/')">/</button>
+            </section>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
