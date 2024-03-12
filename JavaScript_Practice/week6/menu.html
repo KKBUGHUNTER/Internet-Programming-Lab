@@ -1,0 +1,48 @@
+<!-- 6mark question
+    develop a code for drop-down menu on hovering a nav element using HTML and CSS
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu using html & css</title>
+</head>
+
+<body>
+    <h1>1. develop a code for drop-down menu on hovering a nav element using HTML and CSS (6mark)</h1>
+    <h4 onmouseout="MenuOpt()" onmouseup="MenuOpt()">keep mouse to see - Menu Option</h4>
+    <nav id="menu" style="display: none;">
+        <a href="#">Create New File</a> <br>
+        <a href="#">Create New Folder</a><br>
+        <a href="#">Save</a><br>
+        <a href="#">Save as</a><br>
+        <a href="#">Rename</a><br>
+    </nav> <br>
+
+    <h1>2. make use of event listener approach and rewrite the following code: (2mark)</h1>
+    <!-- <button onclick="myFunction()">Click Me</button>
+    <p id="demo"></p>
+    <script>
+        function myFunction(){
+            document.getElementById("demo").innerHTML = "Hello World";
+        }
+    </script> -->
+    <button id="btn" onclick="myFunction()">Click Me</button>
+    <p id="demo"></p>
+
+    <h1>3. Develop a JavaScript code to append a new paragrah with the text "new paragraph" at the end of the paragraph p1 (2mark) </h1>
+    <!-- <div id="div1">
+        <p id="p1">This is a paragraph.</p>
+    </div> -->
+    <div id="div1">
+        <p id="p1">This is a paragraph.</p>
+    </div>
+
+
+    <script src="menu.js">
+    </script>
+</body>
+
+</html>

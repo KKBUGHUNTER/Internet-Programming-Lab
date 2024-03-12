@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2 id="1"></h2>
+    <script>
+        var x = 1000;
+        {
+            const x = 2;
+            document.getElementById("1").innerHTML = x;
+        }
+
+    </script>
+    <h2 id="2"></h2>
+    <script>
+        var x = 1000;
+        {
+            const x = 2;
+        }
+        document.getElementById("2").innerHTML = x;
+
+    </script>
+    <h2 id="3"></h2>
+    <script>
+        var x = 1000;
+        {
+            let x = 2;
+            x = x + 10;
+        }
+        document.getElementById("3").innerHTML = x;
+
+    </script>
+    <h2 id="4"></h2>
+    <script>
+        var x = 1000;
+        {
+            var x = 2;
+            x = x + 10;
+        }
+        document.getElementById("4").innerHTML = x;
+
+    </script>
+</body>
+
+</html>
