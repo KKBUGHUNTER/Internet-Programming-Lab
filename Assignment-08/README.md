@@ -27,3 +27,7 @@ INSERT INTO books VALUES(5,'JavaScript Programming', 10);
 
 SELECT * FROM books;
 ```
+
+### Sample Output
+https://github.com/KKBUGHUNTER/Internet-Programming-Lab/assets/91019132/dfc6f9b0-d9d0-4dc4-8418-e962e28cbf45
+
