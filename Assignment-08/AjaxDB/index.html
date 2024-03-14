@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>My First Web Application</title>
+    <script>
+
+        function loadData() {
+            var xhttp = new XMLHttpRequest();
+            var n = document.getElementById("name").value;
+            // window.alert(n);
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200)
+                    document.getElementById("content").innerHTML = this.responseText;
+            };
+            xhttp.open("GET", "login?name=" + n, true);
+            xhttp.send();
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="name" oninput="loadData()"> 
+    <button type="submit" onclick="loadData()">Submit</button>
+    <h1 id="content">Iam Default Content</h1>
+</body>
+
+</html>
