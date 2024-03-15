@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+</head>
+
+<body>
+    <h4>Question 1</h4>
+    <!-- Write a JavaScript program to use DOM methods to change the text in the first and the last list item element in every unordered list element on this page. Change it to 'first' and 'last'. -->
+    <ul id="list1">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <ul id="list2">
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+    </ul>
+    <ul id="list3">
+        <li>😀</li>
+        <li>😁</li>
+        <li>😆</li>
+    </ul>
+    <script>
+        var lists = document.querySelectorAll("ul");
+
+        lists.forEach(function (list) {
+            var items = list.getElementsByTagName("li");
+            if (items.length > 0) {
+                items[0].textContent = "first";
+                items[items.length - 1].textContent = "last";
+            }
+        });
+    </script>
+
+    <!-- You are given some names of different fruit and an unordered list html element; add a list item for each to the unordered list. -->
+    <h4>Question 2</h4>
+    <ol id="ol2"></ol>
+    <script>
+        const fruitsList = ["Apple", "banana", "tomato"];
+        var e = document.getElementById("ol2")
+        for (var i = 0; i < fruitsList.length; i++) {
+            var li = document.createElement('li');
+            var li_txt = document.createTextNode(fruitsList[i]);
+            li.append(li_txt);
+            e.appendChild(li);
+        }
+    </script>
+
+    <h4>Question 3</h4>
+    <!-- Write a JavaScript program to use DOM methods to add the CroCoder logo (image element) as a child element to the existing div element. -->
+    <div id="imgcontent"></div>
+    <script>
+        const path = "database.jpeg";
+        var image = document.createElement('img');
+        image.src = path;
+        document.getElementById("imgcontent").appendChild(image);
+    </script>
+
+    <h4>Question 4</h4>
+    <!-- Write a JavaScript program to change the font, font size, and color of the paragraph text by clicking on the button will be changed. -->
+    <p id="p1">SSN College of Engineering...</p>
+    <button onclick="fullForm()">FullForm</button>
+    <script>
+        function fullForm() {
+            var e = document.getElementById("p1");
+            e.style.color = "red";
+            e.innerHTML = "Sri SivaSubramaniya Nadar College of Engineering";
+            e.style.fontSize = "30px";
+        }
+    </script>
+
+    <h5>Question 5</h5>
+    <!--  Write a JavaScript program to display a random image (clicking on a button) from the list of 5 images. -->
+    <button onclick="displayRandomImage()">Show Random Image</button>
+    <br><br>
+    <img id="randomImage" src="" height="100px">
+    <script>
+        var imageUrls = [
+            "image1.jpg",
+            "image2.jpeg",
+            "image3.jpeg"
+        ];
+
+        function displayRandomImage() {
+            var randomIndex = Math.floor(Math.random() * imageUrls.length);
+            var imgElement = document.getElementById("randomImage");
+            imgElement.src = imageUrls[randomIndex];
+        }
+    </script>
+
+    <h4>Question 6</h4>
+    <!--  -->
+    <select id="dropdown">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <br><br>
+    <button onclick="countAndDisplayItems()">Count and Display Items</button>
+    
+    <script>
+        function countAndDisplayItems() {
+            var dropdown = document.getElementById("dropdown");
+            var itemCount = dropdown.options.length;
+            var message = "Total items in the dropdown: " + itemCount;
+            alert(message);
+        }
+    </script>
+</body>
+
+</html>
