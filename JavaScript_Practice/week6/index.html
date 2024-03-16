@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Realtime Database Example</title>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+
+        const firebaseConfig = {
+            apiKey: "",
+            authDomain: "",
+            databaseURL: "",
+            projectId: "",
+            storageBucket: "",
+            messagingSenderId: "",
+            appId: ""
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        var database = firebase.database();
+
+        database.ref("/s1").on("value", function (snapshot) {
+            var data = snapshot.val();
+            document.getElementById("p1").innerHTML = data;
+        });
+
+        function SendData() {
+            var data = document.getElementById('v1');
+            database.ref("/s1").set(data.value);
+            document.getElementById('v1').value = "";
+        }
+
+        function DeletePath() {
+            var path = document.getElementById('v1').value;
+            database.ref(path).remove()
+                .then(function () {
+                    document.getElementById('p1').innerHTML = path + " removed successfully!";
+                })
+                .catch(function (error) {
+                    console.error("Error removing path /s1:", error);
+                });
+        }
+    </script>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .main {
+            display: inline-block;
+            text-align: center;
+        }
+
+        input {
+            padding: 10px;
+            width: 220px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        button {
+            padding: 5px;
+        }
+
+        h2 {
+            color: blue;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1>Firebase CRUD Web App</h1>
+        <div class="main">
+            <input type="text" id="v1"> <br><br>
+            <button type="submit" onclick="SendData()">Send Data</button>
+            <button type="button" onclick="DeletePath()">Delete Path</button>
+            <br>
+            <h2>Value: <span id="p1">data</span></h2>
+        </div>
+    </div>
+</body>
+
+</html>
