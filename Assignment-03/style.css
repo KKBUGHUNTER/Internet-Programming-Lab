@@ -52,3 +52,34 @@
         gap: 10px;
         transform-style: preserve-3d;
 }
+.item {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    background-color: white;
+    transform: 0.25s;
+}
+
+.item.boxOpen {
+    transform: rotateY(0deg);
+}
+
+.item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: green;
+    transition: 0.55s;
+    transform: rotateY(0deg);
+    /* opacity: 0.5; */
+    backface-visibility: hidden;
+}
+
+.boxOpen::after,
+.boxMatch::after {
+    transform: rotateY(180deg);
+}
