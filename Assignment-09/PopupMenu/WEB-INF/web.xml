@@ -1,0 +1,25 @@
+<web-app>
+    
+    <servlet>
+        <servlet-name>ProgrameMenu</servlet-name>
+        <servlet-class>ProgrameMenu</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProgrameMenu</servlet-name>
+        <url-pattern>/programeMenu</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>SoftwareMenu</servlet-name>
+        <servlet-class>SoftwareMenu</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SoftwareMenu</servlet-name>
+        <url-pattern>/softwareMenu</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+</web-app>

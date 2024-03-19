@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Menu App</title>
+    <script>
+        function showMenu(position) {
+            var xhttp = new XMLHttpRequest();
+
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById(position).innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "/PopupMenu/" + position, true);
+
+            xhttp.send();
+        }
+
+        function resetMenu(position){
+            document.getElementById(position).innerHTML = "";
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Popup Menu</h1>
+    <section style="display: flex;">
+        <h1 onmousemove="showMenu('programeMenu')" onmouseout="resetMenu('programeMenu')">Programming <div id="programeMenu" style="font-size: medium;">.</div>
+        </h1>
+        <div style="width: 100px;"></div>
+        <h1 onmousemove="showMenu('softwareMenu')" onmouseout="resetMenu('softwareMenu')">Software <div id="softwareMenu" style="font-size: medium;">.</div>
+        </h1>
+    </section>
+</body>
+
+</html>
