@@ -11,7 +11,6 @@ if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
     var synthesis = window.speechSynthesis;
 
     var outputDiv = document.getElementById('user');
-    var machineOutputDiv = document.getElementById('machine');
 
         document.getElementById('startButton').onclick = function () {
         recognition.start();
@@ -31,8 +30,7 @@ if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
                 interimTranscript += event.results[i][0].transcript;
             }
         }
-        outputDiv.textContent = finalTranscript.toLocaleLowerCase();
-        var words = finalTranscript.split(" ");
+        var words = finalTranscript.toLocaleLowerCase().split(" ");
         var key = words[1];
         var playerVal = 0;
         if (key == "one" || key == 1) {
@@ -78,7 +76,7 @@ if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
             document.getElementById("playerM").src = "";
 
         total += playerVal;
-        document.getElementById('point').innerHTML = total;
+        document.getElementById('player-run').innerHTML = total;
         console.log("Total: " + total);
     };
     // document.getElementById('speakButton').onclick = function () {
