@@ -29,29 +29,31 @@
     <main style="display: flex;">
         <!-- 6 -->
         <section id="left">
-            <img id="player" src="images/1.png" alt="player option" width="50%">
+            <img id="player" src="images/stump.jpg" alt="player option" width="50%">
         </section>
         <!-- 7 -->
         <section id="right">
-            <img id="playerM" src="images/1.png" alt="Machine option" width="50%">
+            <img id="playerM" src="images/batandball.png" alt="Machine option" width="50%">
         </section>
     </main>
     <!-- 2 -->
-    <footer>
-        <div style="display: flex; font-weight: bold; background-color: rgba(217, 255, 0, 0.322); padding: 0.5%;">
-    
-            <div>
-                <p id="name">Player Name</p>
-                <center id="player-run">0</center>
+    <div class="foo">
+        <button id="startButton">Start Listening</button>
+        <footer>
+            <div style="display: flex; font-weight: bold; background-color: rgba(217, 255, 0, 0.322); padding: 0.5%;">
+        
+                <div>
+                    <p id="name">Player Name</p>
+                    <center id="player-run">0</center>
+                </div>
+                <h1 style="margin-left: 20px; color: red;">VS</h1>
+                <div style="margin-left: 20px;">
+                    <p>Computer</p>
+                    <center id="machine-run">0</center>
+                </div>
             </div>
-            <h1 style="margin-left: 20px; color: red;">VS</h1>
-            <div style="margin-left: 20px;">
-                <p>Computer</p>
-                <center id="machine-run">0</center>
-            </div>
-        </div>
-    </footer>
-    <button id="startButton">Start Listening</button>
+        </footer>
+    </div>
     <div id="user"></div>
     <div id="machine"></div>
     <!-- <textarea id="inputText" rows="4" placeholder="Enter text here..."></textarea>

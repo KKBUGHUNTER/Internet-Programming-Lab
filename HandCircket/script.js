@@ -1,7 +1,7 @@
 var total = 0;
 if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
     
-    var machineVal = 0;
+    
 
     var recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
     recognition.lang = 'en-US';
@@ -59,7 +59,7 @@ if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
         let min = 1;
         let max = 6;
         let randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
-        console.log(randomNum);
+        var machineVal = randomNum;
         if (randomNum == 1) 
             document.getElementById("playerM").src = "images/1.png";
         else if (randomNum == 2) 
@@ -74,10 +74,15 @@ if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
             document.getElementById("playerM").src = "images/6.png";
         else
             document.getElementById("playerM").src = "";
-
-        total += playerVal;
-        document.getElementById('player-run').innerHTML = total;
-        console.log("Total: " + total);
+        
+        if (playerVal == machineVal) {
+            console.log("Your message here");
+            alert('Out');
+        } else {
+            total += playerVal;
+            document.getElementById('player-run').innerHTML = total;
+            console.log("Total: " + total);
+        }
     };
     // document.getElementById('speakButton').onclick = function () {
     //     var inputText = document.getElementById('inputText').value;
