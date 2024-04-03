@@ -1,0 +1,39 @@
+
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+html,body{
+    height: 100%;
+}
+body{
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+#head{
+    
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    height: 100px;
+}
+
+#hp  {
+    float: left; 
+    padding-top: 0;
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.btn button{
+    background-color: green;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    border: 0;
+}
