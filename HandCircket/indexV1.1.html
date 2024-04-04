@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Version 1.1</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            color: white;
+            font-weight: bolder;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/Background-image.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: blur(3px);
+            z-index: -1;
+        }
+
+        #player-container,
+        #playerM-container {
+            position: relative;
+        }
+
+        #player {
+            position: fixed;
+            left: 10%;
+            top: 10%;
+        }
+
+        #playerM {
+            position: fixed;
+            right: 10%;
+            top: 10%;
+        }
+
+        #text {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <main style="display: flex;">
+        <table>
+            <tr>
+                <td>
+                <td></td>
+                <section id="player-container">
+                    <div id="text">Batting</div>
+                    <img id="player" src="V/batsman.png" alt="player option" width="500">
+                </section>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <section id="playerM-container">
+                        <div id="text">Bowling</div>
+                        <img id="playerM" src="V/bowler.png" alt="Machine option" width="500">
+                    </section>
+                </td>
+            </tr>
+        </table>
+    </main>
+</body>
+
+</html>

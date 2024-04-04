@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleV1.2.css">
+    <title>Speech Recognition & Text-to-Speech</title>
+</head>
+
+<body>
+    <!-- <nav>
+        <kbd>Project Name (or) Logo </kbd>
+        <kbd id="no_of_overs">Over: <b>0</b></kbd>
+    </nav> -->
+
+     <!-- <section id="ballcount">
+        <kbd id="current-balls">0</kbd>
+        <kbd style="color: red;">:</kbd>
+        <kbd id="total-balls">0</kbd>
+    </section> -->
+
+    <section id="positon">
+        <kbd id="player-pos">
+            <div style="background-color: rgba(0, 255, 234, 0.322); padding: 5px;">User</div>
+        </kbd>
+        <kbd id="machine-pos" style="margin-left: 45%;">
+            <div style="background-color: rgba(0, 255, 234, 0.322); padding: 5px;">Computer</div>
+        </kbd>
+    </section>
+    <main style="display: flex;">
+        <!-- 6 -->
+        <section id="left">
+            <img id="player" src="V/batsman.png" alt="player option" width="50%">
+        </section>
+        <!-- 7 -->
+        <section id="right">
+            <img id="playerM" src="V/bowler.png" alt="Machine option" width="50%">
+        </section>
+    </main>
+    <div class="pos">
+        <div style="display: flex;">
+            <div id="1" class="btn" onclick="funcValue()"> <h1>1</h1> </div>
+            <div id="2" class="btn" onclick="funcValue()"> <h1>3</h1> </div>
+            <div id="2" class="btn" onclick="funcValue()"> <h1>4</h1> </div>
+
+            <div id="1" class="btn" onclick="funcValue()"> <h1>5</h1>  </div>
+            <div id="2" class="btn" onclick="funcValue()"> <h1>6</h1> </div>
+            <div id="2" class="btn" onclick="funcValue()"> <h1>7</h1> </div>
+        </div>
+    </div>
+
+    <div class="foo">
+        <button id="startButton"> s </button>
+        <!-- <footer>
+            <div style="display: flex; font-weight: bold; background-color: rgba(217, 255, 0, 0.322); padding: 0.5%;">
+
+                <div>
+                    <p id="name">Player Name</p>
+                    <center id="player-run">0</center>
+                </div>
+                <h1 style="margin-left: 20px; color: red;">VS</h1>
+                <div style="margin-left: 20px;">
+                    <p>Computer</p>
+                    <center id="machine-run">0</center>
+                </div>
+            </div>
+        </footer> -->
+    </div>
+    <div id="user"></div>
+    <div id="machine"></div> 
+     <!-- <textarea id="inputText" rows="4" placeholder="Enter text here..."></textarea>
+    <button id="speakButton">Speak</button>  -->
+
+    <script src="script.js"> </script>
+</body>
+
+</html>
