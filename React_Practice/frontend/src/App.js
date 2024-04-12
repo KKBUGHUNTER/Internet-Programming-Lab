@@ -50,7 +50,7 @@ function App(name) {
         {person.task.map((task, index) => (
           <p key={index} style={listStyle}>{task}</p>
         ))}
-      <button style={btnStyle}> All Complet </button>
+      <button style={btnStyle}> All Completed </button>
     </div>
   );
 }
