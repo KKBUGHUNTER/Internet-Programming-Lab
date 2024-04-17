@@ -1,4 +1,5 @@
 # Install Node 21v in Ubuntu
+**Note:** run the command in `sudo` or `su` user.
 ## Update your System
 ```bash
 sudo apt update
