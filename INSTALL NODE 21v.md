@@ -17,3 +17,7 @@ sudo apt install nodejs -y
 ```bash
 node --version
 ```
+# Update Npm -> 10.5.2
+``bash
+npm install -g npm@10.5.2
+``
