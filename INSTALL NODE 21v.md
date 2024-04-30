@@ -13,12 +13,10 @@ curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg 
 echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_21.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 sudo apt update
 sudo apt install nodejs -y
+sudo npm install -g npm@10.5.2
 ```
 ## Check the version
 ```bash
 node --version
-```
-# Update Npm -> 10.5.2
-```bash
-npm install -g npm@10.5.2
+npm --version
 ```
