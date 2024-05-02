@@ -27,5 +27,12 @@ source ~/.bashrc
 ```bash
 ${SERVER}/bin/startup.sh
 ```
+[Tomcat Servlet 9.0.4 Download Link](https://jar-download.com/artifacts/org.apache.tomcat/tomcat-servlet-api/9.0.4/source-code)
 
+```bash 
+javac -classpath <path-to-tomcat-api> <path-to-java-file>
+```
 
+```bash
+${SERVER}/bin/shutdown.sh && ${SERVER}/bin/startup.sh
+```
