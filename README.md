@@ -19,8 +19,10 @@
 - Week 5 [DOM Style updata and Mouse pointer](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/tree/main/JavaScript_Practice/week5)
 - Week 6 [DOM Content Updata & Firebase App](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/tree/main/JavaScript_Practice/week6)
 ## ReactJS Practice
-
+- [Hooks](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/blob/main/React_Practice/Hooks)
+- [ReactJS Exercise](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/blob/main/React_Practice/frontend)
+- [.excel to mongodb conversion](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/blob/main/React_Practice/e2j)
 ## Node Practice
-[Simple Server](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/blob/main/Node_Practice/Server/)
-[MVC Arch](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/tree/main/Node_Practice/MVC-app)
-[Event-Example](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/blob/main/Node_Practice/Event/)
+- [Simple Server](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/blob/main/Node_Practice/Server/)
+- [MVC Arch](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/tree/main/Node_Practice/MVC-app)
+- [Event-Example](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/blob/main/Node_Practice/Event/)
