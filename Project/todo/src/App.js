@@ -3,7 +3,8 @@ const SERVER_URL = "http://localhost:4000"
 function App() {
 
 	const userInput = useRef('');
-	const [tasks, setTasks] = useState(['test1']);
+	const [tasks, setTasks] = useState([]);
+	const [completedTasks, setCompletedTasks] = useState([]);
 	
 	const addTask = () => {
         console.log("AddTask() Function is called");
@@ -27,6 +28,7 @@ function App() {
 	
 	// READ API "http://localhost:4000/readTask"
 	const readTask = () =>{
+		console.log("ReadTask() function is called");
         fetch(SERVER_URL+"/readTask", {
             method: 'GET'
         })
@@ -38,9 +40,52 @@ function App() {
         .catch(e => console.log("READ ERROR: " + e));
     }
 
+	// Delete API "http://localhost:4000/deleteTask"
+	const deleteTask = (taskIndex) =>{
+		console.log("DeleteTask() function is called");
+		console.log("data: " + taskIndex);
+		fetch(SERVER_URL+'/deleteTask', {
+			method: "POST",
+			headers:{
+				"Content-Type":"application/json"
+			},
+			body: JSON.stringify({index:taskIndex})
+		})
+		.then(res => res.text())
+		.then(data => readTask())
+		.catch(error => console.log("DELETE ERROR: " + error));
+	}
+
+	//  Move API "http://localhost:4000/moveTask"
+	const moveTask = (taskIndex) =>{
+		console.log("DeleteTask() function is called");
+		console.log("data: " + taskIndex);
+		fetch(SERVER_URL+'/moveTask', {
+			method: "POST",
+			headers:{
+				"Content-Type":"application/json"
+			},
+			body: JSON.stringify({index:taskIndex})
+		})
+		.then(res => res.text())
+		.then(data => readTask())
+		.catch(error => console.log("MOVE ERROR: " + error));
+	}
+
+	const readCompletedTask = () => {
+		fetch(SERVER_URL + "/readCompletedTask")
+			.then(res => res.json())
+			.then(data => {
+				console.log(data.completedTasks);
+				setCompletedTasks(data.completedTasks);
+			})
+			.catch(e => console.log("READ COMPLETED ERROR: " + e));
+	};
+	
 
 	useEffect(() => {
         readTask(); 
+		readCompletedTask();
     }, []);
 
 	const style = {
@@ -83,14 +128,20 @@ function App() {
 					<div key={index} style={style.taskStyle}>
 						{task}
 						<span style={{float: "right"}}>
-							<button type="submit" style={style.taskBtn}><img src="https://cdn-icons-png.flaticon.com/512/6861/6861362.png" alt="delete" height="15px" /></button>
-							<button type="submit" style={style.taskBtn}> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flat_tick_icon.svg/512px-Flat_tick_icon.svg.png" alt="completed" height="15px" /></button>
+							<button type="submit" onClick={()=>deleteTask(index)} style={style.taskBtn}><img src="https://cdn-icons-png.flaticon.com/512/6861/6861362.png" alt="delete" height="15px" /></button>
+							<button type="submit" onClick={() => moveTask(index)} style={style.taskBtn}> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flat_tick_icon.svg/512px-Flat_tick_icon.svg.png" alt="completed" height="15px" /></button>
 						</span>
 					</div>
 				))}
 			</section>
 			<h2> --- Completed Task --- </h2>
-			<section id="completed-task"></section>
+			<section id="completed-task">
+				{completedTasks.map((task, index) => (
+					<div key={index} style={{backgroundColor:"lightgray", padding:'10px', borderRadius:'15px', margin:'10px', marginLeft:'25px', width:"100px"}}>
+						{task}
+					</div>
+				))}
+			</section>
 		</div>
 	);
 }

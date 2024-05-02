@@ -12,7 +12,8 @@ const client = new MongoClient("mongodb://localhost:27017");
 client.connect();
 const db = client.db("learning");
 const usersCollection = db.collection("todo");
-console.log("Database: " + "learning" + " Collection: " + "todo");
+const completedCollection = db.collection("completed");
+console.log("Database Connected Successfuly....");
 
 
 // AddTask END POINT
@@ -54,6 +55,86 @@ server_name.get('/readTask', async (req, res) => {
     }
 })
 
+// DeleteTask END-POINT
+async function DeleteTask(pos){
+    try {
+        const tasks = await ReadTask();
+        if (pos >= 0 && pos < tasks.length) { 
+            const taskToDelete = tasks[pos];
+            await usersCollection.deleteOne({ task: taskToDelete });
+        } else {
+            console.log("Invalid position:", pos);
+        }
+    } catch(error){
+        console.error('Error in deleting record in DB:', error);
+    }
+}
+
+server_name.post('/deleteTask', (req, res)=>{
+    try{
+        const data = req.body;
+
+        DeleteTask(data.index);
+
+        res.status(200).send("success");
+    }catch(error){
+        res.status(402).send("Delete Error");
+    }
+})
+
+// MoveTask END-POINT
+async function MoveTask(pos) {
+    try {
+        const tasks = await ReadTask();
+        if (pos >= 0 && pos < tasks.length) {
+            const taskToMove = tasks[pos];
+            const result = await completedCollection.insertOne({ task: taskToMove });
+            console.log("Task moved to completed collection:", result.insertedId);
+            await DeleteTask(pos);
+        } else {
+            console.log("Invalid position:", pos);
+        }
+    } catch (error) {
+        console.error("Error moving task:", error);
+    }
+}
+
+server_name.post('/moveTask', (req, res) =>{
+    try {
+        const data = req.body;
+        const index = data.index; 
+
+        MoveTask(index);
+
+        res.status(200).send("success");
+    } catch (error) {
+        console.error("Move Error:", error);
+        res.status(500).send("Move Error");
+    }
+})
+
+// ReadCompletedTask END-POINT
+async function ReadCompletedTask() {
+    try {
+        const cursor = completedCollection.find({});
+        const tasks = await cursor.toArray();
+        const result = tasks.map(task => task.task);
+        return result;
+    } catch (error) {
+        console.error("Error reading completed tasks:", error);
+        return [];
+    }
+}
+
+server_name.get('/readCompletedTask', async (req, res) => {
+    try {
+        const completedTasks = await ReadCompletedTask();
+        res.status(200).json({ completedTasks });
+    } catch (error) {
+        console.error("Error fetching completed tasks:", error);
+        res.status(500).send("Internal server error");
+    }
+});
 
 
 server_name.listen(4000, ()=>{
