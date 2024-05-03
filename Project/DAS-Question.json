@@ -1,0 +1,213 @@
+[
+    {
+        "question_number": 1,
+        "question": "Minimum number of fields in each node of a doubly linked list is ____",
+        "options": ["2", "3", "4", "None of the above"],
+        "correct_answer": "B",
+        "explanation": "3"
+    },
+    {
+        "question_number": 2,
+        "question": "A graph in which all vertices have equal degree is known as ____",
+        "options": ["Complete graph", "Regular graph", "Multi graph", "Simple graph"],
+        "correct_answer": "A",
+        "explanation": "Complete graph"
+    },
+    {
+        "question_number": 3,
+        "question": "A vertex of in-degree zero in a directed graph is called a/an",
+        "options": ["Root vertex", "Isolated vertex", "Sink", "Articulation point"],
+        "correct_answer": "C",
+        "explanation": "Sink"
+    },
+    {
+        "question_number": 4,
+        "question": "A graph is a tree if and only if graph is",
+        "options": ["Directed graph", "Contains no cycles", "Planar", "Completely connected"],
+        "correct_answer": "B",
+        "explanation": "Contains no cycles"
+    },
+    {
+        "question_number": 5,
+        "question": "The elements of a linked list are stored",
+        "options": ["In a structure", "In an array", "Anywhere the computer has space for them", "In contiguous memory locations"],
+        "correct_answer": "C",
+        "explanation": "Anywhere the computer has space for them"
+    },
+    {
+        "question_number": 6,
+        "question": "A parentheses checker program would be best implemented using",
+        "options": ["List", "Queue", "Stack", "Any of the above"],
+        "correct_answer": "C",
+        "explanation": "Stack"
+    },
+    {
+        "question_number": 7,
+        "question": "To perform level-order traversal on a binary tree, which of the following data structure will be required?",
+        "options": ["Hash table", "Queue", "Binary search tree", "Stack"],
+        "correct_answer": "B",
+        "explanation": "Queue"
+    },
+    {
+        "question_number": 8,
+        "question": "Which of the following data structure is required to convert arithmetic expression in infix to its equivalent postfix notation?",
+        "options": ["Queue", "Linked list", "Binary search tree", "None of above"],
+        "correct_answer": "D",
+        "explanation": "None of above"
+    },
+    {
+        "question_number": 9,
+        "question": "A binary tree in which all its levels except the last, have maximum numbers of nodes, and all the nodes in the last level have only one child it will be its left child. Name the tree.",
+        "options": ["Threaded tree", "Complete binary tree", "M-way search tree", "Full binary tree"],
+        "correct_answer": "B",
+        "explanation": "Complete binary tree"
+    },
+    {
+        "question_number": 10,
+        "question": "Which of following data structure is more appropriate for implementing quick sort iteratively?",
+        "options": ["Deque", "Queue", "Stack", "Priority queue"],
+        "correct_answer": "C",
+        "explanation": "Stack"
+    },
+    {
+        "question_number": 11,
+        "question": "The number of edges in a complete graph of n vertices is",
+        "options": ["n(n+1)/2", "n(n-1)/2", "n2/2", "n"],
+        "correct_answer": "B",
+        "explanation": "n(n-1)/2"
+    },
+    {
+        "question_number": 12,
+        "question": "If two trees have same structure and but different node content, then they are called ___",
+        "options": ["Synonyms trees", "Joint trees", "Equivalent trees", "Similar trees"],
+        "correct_answer": "D",
+        "explanation": "Similar trees"
+    },
+    {
+        "question_number": 13,
+        "question": "If two trees have same structure and node content, then they are called ____",
+        "options": ["Synonyms trees", "Joint trees", "Equivalent trees", "Similar trees"],
+        "correct_answer": "C",
+        "explanation": "Equivalent trees"
+    },
+    {
+        "question_number": 14,
+        "question": "Finding the location of a given item in a collection of items is called ......",
+        "options": ["Discovering", "Finding", "Searching", "Mining"],
+        "correct_answer": "C",
+        "explanation": "searching"
+    },
+    {
+        "question_number": 15,
+        "question": "The time complexity of quicksort is ........",
+        "options": ["O(n)", "O(logn)", "O(n2)", "O(n logn)"],
+        "correct_answer": "D",
+        "explanation": "O(n logn)"
+    },
+    {
+        "question_number": 16,
+        "question": "Quick sort is also known as ........",
+        "options": ["merge sort", "tree sort", "shell sort", "partition and exchange sort"],
+        "correct_answer": "D",
+        "explanation": "partition and exchange sort"
+    },
+    {
+        "question_number": 17,
+        "question": ".......... sorting is good to use when alphabetizing a large list of names.",
+        "options": ["Merge", "Heap", "Radix", "Bubble"],
+        "correct_answer": "C",
+        "explanation": "Radix"
+    },
+    {
+        "question_number": 18,
+        "question": "The total number of comparisons in a bubble sort is ....",
+        "options": ["O(n logn)", "O(2n)", "O(n2)", "O(n)"],
+        "correct_answer": "A",
+        "explanation": "O(n logn)"
+    },
+    {
+        "question_number": 19,
+        "question": "......... form of access is used to add and remove nodes from a queue.",
+        "options": ["LIFO, Last In First Out", "FIFO, First In First Out", "Both a and b", "None of these"],
+        "correct_answer": "B",
+        "explanation": "FIFO, First In First Out"
+    },
+    {
+        "question_number": 20,
+        "question": "New nodes are added to the ......... of the queue.",
+        "options": ["Front", "Back", "Middle", "Both A and B"],
+        "correct_answer": "B",
+        "explanation": "Back"
+    },
+    {
+        "question_number": 21,
+        "question": "The term push and pop is related to",
+        "options": ["Array", "Lists", "Stacks", "Trees"],
+        "correct_answer": "C",
+        "explanation": "Stacks"
+    },
+    {
+        "question_number": 22,
+        "question": "Which of the following is an application of stack?",
+        "options": ["finding factorial", "tower of Hanoi", "infix to postfix", "all of the above"],
+        "correct_answer": "D",
+        "explanation": "all of the above"
+    },
+    {
+        "question_number": 23,
+        "question": "The operation of processing each element in the list is known as ......",
+        "options": ["sorting", "merging", "inserting", "traversal"],
+        "correct_answer": "D",
+        "explanation": "traversal"
+    },
+    {
+        "question_number": 24,
+        "question": "The situation when in a linked list START=NULL is ....",
+        "options": ["Underflow", "Overflow", "Houseful", "Saturated"],
+        "correct_answer": "A",
+        "explanation": "Underflow"
+    },
+    {
+        "question_number": 25,
+        "question": "Which of the following are two-way lists?",
+        "options": ["Grounded header list", "Circular header list", "Linked list with header and trailer nodes", "List traversed in two directions"],
+        "correct_answer": "D",
+        "explanation": "List traversed in two directions"
+    },
+    {
+        "question_number": 26,
+        "question": "Which is the pointer associated with the availability list?",
+        "options": ["FIRST", "AVAIL", "TOP", "REAR"],
+        "correct_answer": "B",
+        "explanation": "AVAIL"
+    },
+    {
+        "question_number": 27,
+        "question": "Which of the following data structure can’t store the non-homogeneous data elements?",
+        "options": ["Arrays", "Records", "Pointers", "Stacks"],
+        "correct_answer": "A",
+        "explanation": "Arrays"
+    },
+    {
+        "question_number": 28,
+        "question": "Which of the following is non-linear data structure?",
+        "options": ["Stacks", "List", "Strings", "Trees"],
+        "correct_answer": "D",
+        "explanation": "Trees"
+    },
+    {
+        "question_number": 29,
+        "question": "To represent hierarchical relationship between elements, which data structure is suitable?",
+        "options": ["Dequeue", "Priority", "Tree", "Graph"],
+        "correct_answer": "C",
+        "explanation": "Tree"
+    },
+    {
+        "question_number": 30,
+        "question": "Identify the data structure which allows deletions at both ends of the list but insertion at only one end.",
+        "options": ["Input restricted dequeue", "Output restricted queue", "Priority queues", "Stack"],
+        "correct_answer": "A",
+        "explanation": "Input restricted dequeue"
+    }
+]
+
