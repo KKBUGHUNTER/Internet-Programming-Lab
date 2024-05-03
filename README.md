@@ -10,8 +10,8 @@
 - Assignment 07 [Develop a Hello Application using AJAX.](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/tree/main/Assignment-07)
 - Assignment 08 [Develop a Popup Menu Application using AJAX.](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/tree/main/Assignment-08)
 - Assignment 09 [Popup menu using Ajax and DB ](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/tree/main/Assignment-09)
-- Assignment 10 [ ](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/tree/main/Assignment-10)
-- Assignment 11 [ ](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/tree/main/Assignment-11)
+- Assignment 10 [Simple Shopping App ](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/tree/main/Assignment-10)
+- Assignment 11 [ Full-Stack ToDo App ](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/tree/main/Assignment-11)
 
 ## JavaScript Practice
 - Week 3 [JS Basic input, event, function, DOM](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/tree/main/JavaScript_Practice/week3)
