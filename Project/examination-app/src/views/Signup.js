@@ -1,10 +1,37 @@
 import React, { useState } from 'react';
+const SERVER_NAME = "http://localhost:7020";
 
 function Signup(){
   const [username, setUsername] = useState('');
   const [regno, setRegNo] = useState('');
   const [password, setPassword] = useState('');
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [message, setMessage] = useState('');
+
+  const handleSignup = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch(SERVER_NAME+'/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username: username, registerNumber: regno, password:password })
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        window.location.href = '/';
+      } else {
+        const data = await response.json();
+        setMessage(data.message);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setMessage('An error occurred, please try again later');
+    }
+};
+
 
   const style = {
     containerStyle:{
@@ -37,31 +64,15 @@ function Signup(){
     }
   };
 
-  const handleLogin = (e) => {
-    e.preventDefault();
+  
 
-    if (username !== '' && password !== '') {
-      setIsLoggedIn(true);
-    } else {
-      alert('Please enter username and password.');
-    }
-  };
-
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-  };
     return(
         <div style={style.containerStyle}>
       <div style={style.boxStyle}>
-        {isLoggedIn ? (
-          <div>
-            <h2>Welcome, {username}!</h2>
-            <button style={style.buttonStyle} onClick={handleLogout}>Logout</button>
-          </div>
-        ) : (
-          <form onSubmit={handleLogin}>
+          <form onSubmit={handleSignup}>
             <h2>Sign Up</h2>
 
+            <label>Username:</label>
             <input
               type="text"
               value={username}
@@ -76,6 +87,7 @@ function Signup(){
               value={regno}
               onChange={(e) => setRegNo(e.target.value)}
               required
+              pattern="[0-9]*"
               style={style.inputStyle}
             />
             <label>Password:</label>
@@ -86,10 +98,11 @@ function Signup(){
               required
               style={style.inputStyle}
             />
-            <button type="submit" style={style.buttonStyle}>Login</button>
-            <small>Already have an account <a href="http://localhost:3000/" alt="sign up">Log in</a></small>
+            <p style={{color:"red"}}>{message}</p>
+            <button type="submit" style={style.buttonStyle}>Sign Up</button>
+            <small>Already have an account <a href="http://localhost:3000/" alt="login">Log in</a></small>
           </form>
-        )}
+      
       </div>
     </div>
     );
