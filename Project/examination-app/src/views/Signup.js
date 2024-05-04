@@ -99,8 +99,8 @@ function Signup(){
               style={style.inputStyle}
             />
             <p style={{color:"red"}}>{message}</p>
-            <button type="submit" style={style.buttonStyle}>Sign Up</button>
-            <small>Already have an account <a href="http://localhost:3000/" alt="login">Log in</a></small>
+            <button type="submit" style={style.buttonStyle}><big><b>Sign Up</b></big></button>
+            <small>Already have an account <a href="http://localhost:3000/" alt="login"><b>Log in</b></a></small>
           </form>
       
       </div>

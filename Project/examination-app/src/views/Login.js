@@ -1,4 +1,7 @@
+// /src/views/Login.js
 import React, { useState } from 'react';
+import Cookies from 'js-cookie';
+
 const SERVER_NAME = "http://localhost:7020";
 function Login() {
 
@@ -40,26 +43,21 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    try {
-      const response = await fetch(SERVER_NAME+'/login', {
+      fetch(SERVER_NAME+'/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({ registerNumber:regno, password:password })
-      });
+      })
+      .then(res => res.json())
+      .then(data=>{
+        // setMessage(data.message)
+        Cookies.set('token', data.token, { expires: 1 }); // Expires in 1 day
+        window.location.href = '/dashboard';
+      })
+      .catch(error => setMessage(error));
 
-      if (response.ok) {
-        // Redirect to the dashboard or perform any other action
-        setMessage('Login successful');
-      } else {
-        const data = await response.json();
-        setMessage(data.message);
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      setMessage('An error occurred, please try again later');
-    }
   };
 
 
@@ -87,8 +85,8 @@ function Login() {
               style={style.inputStyle}
             />
             <p style={{color:"red"}}>{message}</p>
-            <button type="submit" style={style.buttonStyle}>Login</button>
-            <small>Don't have an account? <a href="http://localhost:3000/signup" alt="sign up">Sign up</a></small>
+            <button type="submit" style={style.buttonStyle}><big><b>Login</b></big></button>
+            <small>Don't have an account? <a href="http://localhost:3000/signup" alt="sign up"><b>Sign up</b></a></small>
           </form>
       </div>
     </div>

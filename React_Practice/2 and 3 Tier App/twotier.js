@@ -18,8 +18,9 @@ let users = [
 
 // Login endpoint
 app.post('/login', (req, res) => {
+  console.log(req.body);
   const { username, password } = req.body;
-
+  console.log(username, password);
   // Find user by username
   const user = users.find(user => user.username === username);
 
@@ -39,7 +40,7 @@ app.post('/login', (req, res) => {
 // Signup endpoint
 app.post('/signup', (req, res) => {
   const { username, password } = req.body;
-
+  console.log("New user: ", username, " Passored: ", password);
   // Check if the username already exists
   const existingUser = users.find(user => user.username === username);
   if (existingUser) {
