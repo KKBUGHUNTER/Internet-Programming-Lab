@@ -1,8 +1,9 @@
-function CourseBox({ data }) {
+import React from 'react';
 
+function CourseBox({ data, onTakeTest }) {
     const style = {
         master: {
-            margin: "0",
+            margin: "10px",
             padding: "10px", 
             border: "0",
             width: "400px",
@@ -20,12 +21,16 @@ function CourseBox({ data }) {
         
     };
 
+    const handleTakeTest = () => {
+        onTakeTest(data.testName);
+    };
+
     return (
         <div style={style.master}>
-            <h2>{data.testName}</h2>
-            <big>{data.testDescription}</big>
-            <small>Score: {data.score}</small> <br />
-            <button  type="submti" style={style.btn}> <big><b >Start Test</b></big></button>
+            <h2 style={{color:"darkgreen"}}>{data.testName}</h2>
+            <small>{data.testDescription}</small> <br/> <br/>
+            <span><b>Score: <i>{data.score}</i></b></span> <br />
+            <button onClick={handleTakeTest} style={style.btn}> <big><b >Take Test</b></big></button>
             <br />
             <br />
         </div>
@@ -33,4 +38,3 @@ function CourseBox({ data }) {
 }
 
 export default CourseBox;
-

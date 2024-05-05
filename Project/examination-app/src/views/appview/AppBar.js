@@ -35,10 +35,10 @@ function AppBar({ parse }) {
 
     return (
         <div style={style.appBar}>
-            <b>Hello {parse.userId},</b>
+            <b>Hello <i>{parse.userId}</i>,</b>
             <button type="submit" onClick={Logout} style={style.btn}>LogOut</button>
             <a href="http://localhost:3000/profile">
-                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="profile image" height="40px" style={style.profileImage} />
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="profile img" height="40px" style={style.profileImage} />
             </a>
         </div>
     );

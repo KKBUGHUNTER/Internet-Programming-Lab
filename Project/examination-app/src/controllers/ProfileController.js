@@ -1,5 +1,5 @@
 // /src/controllers/ProfileController.js
-const {getUser, DeleteUser} = require("../models/appmodle/ProfileModel");
+const {getUser, DeleteUser} = require("../models/appmodel/ProfileModel");
 
 
 exports.getUserDetails = async (req, res) => {
@@ -9,7 +9,7 @@ exports.getUserDetails = async (req, res) => {
 
     try {
         const user = await getUser(userId); // Call getUserDetails function with userId
-        console.log(user);
+        // console.log(user);
         if (!user) {
             return res.status(404).json({ message: "User not found" });
         }
@@ -21,7 +21,7 @@ exports.getUserDetails = async (req, res) => {
             courseCount: user.solved.length, // Corrected to use array.length
             courseList: user.solved
         };
-        console.log(data);
+        // console.log(data);
         return res.json(data);
     } catch (error) {
         console.log("Error retrieving user details:", error);
