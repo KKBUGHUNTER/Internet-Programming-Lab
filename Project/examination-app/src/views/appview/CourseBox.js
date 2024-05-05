@@ -24,7 +24,6 @@ function CourseBox({ data }) {
         <div style={style.master}>
             <h2>{data.testName}</h2>
             <big>{data.testDescription}</big>
-            <b><p>Duration: <small>{data.testDuration}</small></p> </b>
             <small>Score: {data.score}</small> <br />
             <button  type="submti" style={style.btn}> <big><b >Start Test</b></big></button>
             <br />

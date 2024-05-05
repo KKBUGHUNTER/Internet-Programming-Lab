@@ -53,8 +53,13 @@ function Login() {
       .then(res => res.json())
       .then(data=>{
         // setMessage(data.message)
-        Cookies.set('token', data.token, { expires: 1 }); // Expires in 1 day
-        window.location.href = '/dashboard';
+        if(data.username != undefined){
+          Cookies.set('token', data.token, { expires: 1 }); // Expires in 1 day
+          window.location.href = '/dashboard';
+        }
+        else{
+          setMessage("Incorrect Username or Password.");
+        }
       })
       .catch(error => setMessage(error));
 

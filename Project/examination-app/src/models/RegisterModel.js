@@ -14,7 +14,7 @@ async function RegisterUser(username, registerNumber, password){
             username: username ,
             password: password,
             solved: [],
-            rank: 0
+            score: 0
         };
 
         // Insert the user into the user collection

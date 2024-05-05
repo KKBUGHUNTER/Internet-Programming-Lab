@@ -8,7 +8,7 @@ class MainModel {
     this.client = new MongoClient('mongodb://localhost:27017');  // Database Client
     this.dbName = 'ExaminationApp'; // Database name
     this.userCollection = 'User'; // User Collection 
-    this.appCollection = 'AppData'; // AppData Collection 
+    this.appDataCollection = 'AppData'; // AppData Collection 
   }
 
   async connect() {
@@ -34,8 +34,8 @@ class MainModel {
     return this.getCollection(this.userCollection);
   }
 
-  async getAppCollection() {
-    return this.getCollection(this.appCollection);
+  async getAppDataCollection() {
+    return this.getCollection(this.appDataCollection);
   }
 
   async close() {

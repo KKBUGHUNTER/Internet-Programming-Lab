@@ -2,13 +2,14 @@
 
 const express = require('express');
 const router = express.Router();
-const mainController = require('../controllers/LoginRegisterController.js');
-const authenticate = require("../middleware/authenticate.js");
+const LoginRegisterController = require('../controllers/LoginRegisterController.js');
 const dashboardController = require("../controllers/DashboardController.js");
+const profileController = require("../controllers/ProfileController.js");
 
-router.post('/login', mainController.login);
-router.post('/register', mainController.register);
-
+router.post('/login', LoginRegisterController.login);
+router.post('/register', LoginRegisterController.register);
+router.get('/userDetails', profileController.getUserDetails);
+router.delete('/deleteUser', profileController.deleteAccount);
 
 module.exports = router;
 
