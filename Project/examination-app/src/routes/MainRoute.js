@@ -19,6 +19,7 @@ router.get('/test', dashboardController.getTestList);
 
 // stage 3 
 router.get("/taketest", testController.testData);
+router.get('/updateUserData', profileController.updateUserScore);
 
 
 module.exports = router;

@@ -37,4 +37,20 @@ async function DeleteUser(userId){
     }
 }
 
-module.exports = {getUser, DeleteUser};
+async function updateUserScore(userId, newScore, testName) {
+    const mainModule = new MainModel();
+    await mainModule.connect();
+    const userCollection = await mainModule.getUserCollection();
+    console.log(userId, newScore, testName);
+    try {
+        await userCollection.updateOne(
+            { _id: userId },
+            { $set: { score: newScore }, $addToSet: { solved: testName } } // Update score and add testName to solved array
+        );
+    } catch (error) {
+        console.log("Error updating user score:", error);
+        throw error;
+    }
+}
+
+module.exports = {getUser, DeleteUser, updateUserScore};

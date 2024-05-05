@@ -1,5 +1,5 @@
 // /src/controllers/ProfileController.js
-const {getUser, DeleteUser} = require("../models/appmodel/ProfileModel");
+const {getUser, DeleteUser, updateUserScore} = require("../models/appmodel/ProfileModel");
 
 
 exports.getUserDetails = async (req, res) => {
@@ -41,5 +41,19 @@ exports.deleteAccount = async (req, res) => {
         return res.json({ message: "DeleteSuccess" });
     } else {
         return res.status(500).json({ message: "Failed to delete user account" });
+    }
+};
+
+exports.updateUserScore = async (req, res) => {
+    let { userId, score, testName } = req.query; // Extract userId, score, and testName from request query parameters
+    userId = parseInt(userId);
+    score = parseInt(score);
+    console.log(userId, score, testName);
+    try {
+        await updateUserScore(userId, score, testName); // Call updateUserScore function with userId, score, and testName
+        return res.status(200).json({ message: "User score updated successfully" });
+    } catch (error) {
+        console.log("Error updating user score:", error);
+        return res.status(500).json({ message: "Internal server error" });
     }
 };
