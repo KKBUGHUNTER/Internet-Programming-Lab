@@ -1,99 +1,178 @@
-var total = 0;
-if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
-    
-    
+var ISPLAY = true;
 
-    var recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
-    recognition.lang = 'en-US';
-    recognition.interimResults = true;
-    recognition.continuous = true;
-
-    var synthesis = window.speechSynthesis;
-
-    var outputDiv = document.getElementById('user');
-
-        document.getElementById('startButton').onclick = function () {
-        recognition.start();
-
-        setTimeout(function () {
-            recognition.stop();
-        }, 3000);
-    };
-    
-    recognition.onresult = function (event) {
-        var interimTranscript = '';
-        var finalTranscript = '';
-        for (var i = event.resultIndex; i < event.results.length; ++i) {
-            if (event.results[i].isFinal) {
-                finalTranscript += event.results[i][0].transcript;
-            } else {
-                interimTranscript += event.results[i][0].transcript;
-            }
-        }
-        var words = finalTranscript.toLocaleLowerCase().split(" ");
-        var key = words[1];
-        var playerVal = 0;
-        if (key == "one" || key == 1) {
-            document.getElementById("player").src = "images/1.png";
-            playerVal = 1;
-        }
-        else if (key == "two" || key == 2|| key == "to") {
-            document.getElementById("player").src = "images/2.png";
-            playerVal = 2;}
-        else if (key == "three" || key == 3) {
-            document.getElementById("player").src = "images/3.png";
-            playerVal = 3;}
-        else if (key == "four"|| key == "for" || key == 4) {
-            document.getElementById("player").src = "images/4.png";
-            playerVal = 4;}
-        else if (key == "five" || key == 5) {
-            document.getElementById("player").src = "images/5.png";
-            playerVal = 5;}
-        else if (key == "six" || key == 6) {
-            document.getElementById("player").src = "images/6.png";
-            playerVal = 6;}
-        else{
-            document.getElementById("player").src = "";
-            playerVal = 0;}
-        
-        let min = 1;
-        let max = 6;
-        let randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
-        var machineVal = randomNum;
-        if (randomNum == 1) 
-            document.getElementById("playerM").src = "images/1.png";
-        else if (randomNum == 2) 
-            document.getElementById("playerM").src = "images/2.png";
-        else if (randomNum == 3) 
-            document.getElementById("playerM").src = "images/3.png";
-        else if (randomNum == 4) 
-            document.getElementById("playerM").src = "images/4.png";
-        else if (randomNum == 5) 
-            document.getElementById("playerM").src = "images/5.png";
-        else if (randomNum == 6) 
-            document.getElementById("playerM").src = "images/6.png";
-        else
-            document.getElementById("playerM").src = "";
-        
-        if (playerVal == machineVal) {
-            console.log("Your message here");
-            alert('Out');
-        } else {
-            total += playerVal;
-            document.getElementById('player-run').innerHTML = total;
-            console.log("Total: " + total);
-        }
-    };
-    // document.getElementById('speakButton').onclick = function () {
-    //     var inputText = document.getElementById('inputText').value;
-    //     var utterance = new SpeechSynthesisUtterance(inputText);
-    //     synthesis.speak(utterance);
-    // };
-
-
-    
-    
-} else {
-    alert('Speech recognition not supported in your browser.');
+var x = 0;
+var y = 0;
+var userScore = 0;
+var machineScore = 0;
+function display1(){
+    x = machineNo();
+    y = 1;
+    document.getElementById("playerM").src = 'images/'+x+".png";
+    var img = document.getElementById('player');
+    img.src = 'images/1.png';  
+    if(ISPLAY == true){
+        setTimeout(function() {
+            img.src = 'images/batsman.png';
+            document.getElementById("playerM").src = 'images/bowler.png';
+        },1500);
+    }
+    else{
+        setTimeout(function() {
+            img.src = 'images/bowler.png';
+            document.getElementById("playerM").src = 'images/batsman.png';
+        },1500);
+    }
+    check();
+}
+function display2(){
+    x = machineNo();
+    y = 2;
+    document.getElementById("playerM").src = 'images/'+x+".png";
+    var img = document.getElementById('player');
+    img.src = 'images/2.png';  
+    if(ISPLAY == true){
+        setTimeout(function() {
+            img.src = 'images/batsman.png';
+            document.getElementById("playerM").src = 'images/bowler.png';
+        },1500);
+    }
+    else{
+        setTimeout(function() {
+            img.src = 'images/bowler.png';
+            document.getElementById("playerM").src = 'images/batsman.png';
+        },1500);
+    }
+    check();
+}
+function display3(){
+    x = machineNo();
+    y = 3;
+    document.getElementById("playerM").src = 'images/'+x+".png";
+    var img = document.getElementById('player');
+    img.src = 'images/3.png';  
+    if(ISPLAY == true){
+        setTimeout(function() {
+            img.src = 'images/batsman.png';
+            document.getElementById("playerM").src = 'images/bowler.png';
+        },1500);
+    }
+    else{
+        setTimeout(function() {
+            img.src = 'images/bowler.png';
+            document.getElementById("playerM").src = 'images/batsman.png';
+        },1500);
+    }
+    check();
+}
+function display4(){
+    x = machineNo();
+    y = 4;
+    document.getElementById("playerM").src = 'images/'+x+".png";
+    var img = document.getElementById('player');
+    img.src = 'images/4.png';  
+    if(ISPLAY == true){
+        setTimeout(function() {
+            img.src = 'images/batsman.png';
+            document.getElementById("playerM").src = 'images/bowler.png';
+        },1500);
+    }
+    else{
+        setTimeout(function() {
+            img.src = 'images/bowler.png';
+            document.getElementById("playerM").src = 'images/batsman.png';
+        },1500);
+    }
+    check();
+}
+function display5(){
+    x = machineNo();
+    y = 5;
+    document.getElementById("playerM").src = 'images/'+x+".png";
+    var img = document.getElementById('player');
+    img.src = 'images/5.png';  
+    if(ISPLAY == true){
+        setTimeout(function() {
+            img.src = 'images/batsman.png';
+            document.getElementById("playerM").src = 'images/bowler.png';
+        },1500);
+    }
+    else{
+        setTimeout(function() {
+            img.src = 'images/bowler.png';
+            document.getElementById("playerM").src = 'images/batsman.png';
+        },1500);
+    }
+    check();
+}
+function display6(){
+    x = machineNo();
+    y = 6;
+    document.getElementById("playerM").src = 'images/'+x+".png";
+    var img = document.getElementById('player');
+    img.src = 'images/6.png';  
+    if(ISPLAY == true){
+        setTimeout(function() {
+            img.src = 'images/batsman.png';
+            document.getElementById("playerM").src = 'images/bowler.png';
+        },1500);
+    }
+    else{
+        setTimeout(function() {
+            img.src = 'images/bowler.png';
+            document.getElementById("playerM").src = 'images/batsman.png';
+        },1500);
+    }
+    check();
+}
+function machineNo(){
+    var y = Math.floor(Math.random() *6 ) + 1;
+   return y;
 }
 
+function check() {
+    if(x==y){
+        alert(" out with " +(userScore)+ " runs" );
+        ISPLAY = false;
+        machineScore=0;
+        playerSwitch();
+    }
+    else{
+        if(ISPLAY == true){
+            userScore += y;
+            document.getElementById("player-run").innerHTML=userScore;
+        }
+        else{
+            machineScore += x;
+            document.getElementById("machine-run").innerHTML=machineScore;
+            if(machineScore > userScore){
+                finalResult();
+            }
+            if(x == y && machineScore <= userScore ){
+                alert("Computer out you Win");
+            }
+        }
+    }
+}
+function playerSwitch(){
+    if(ISPLAY == false){
+        console.log("user switched");
+        document.getElementById("player-pos").innerHTML="Bowling";
+        document.getElementById("player").src='images/bowler.png';
+        display1();
+        userScore -= 1;
+        document.getElementById("machine-run").innerHTML=0;
+        machineScore=0;
+        document.getElementById("machine-pos").innerHTML="Batting";
+        setTimeout(function() {
+            machineScore=0;
+            document.getElementById("playerM").src = 'images/batsman.png';
+        },1500);
+       
+    }
+    else{
+        document.getElementById("player-run").innerHTML = 0;
+    }
+}
+function finalResult(){
+    alert("You lose");
+}
