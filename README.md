@@ -34,14 +34,14 @@
 - [Event-Example](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/blob/main/Node_Practice/Event/)
 
 ## Setup and Install and Config ⚙️
-- [Tomcat Install and Config]()
-- [Install and Config MySql in Ubuntu]()
-- [Install Node 21.x and NPM 10.x.x]()
-- [Mongodb install and Config]()
-
+- [Tomcat Install and Config](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/blob/main/INSTALL-TOMCAT.md)
+- [Install and Config MySql in Ubuntu](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/blob/main/INSTALL-CONFOG-MYSQL.md)
+- [Install Node 21.x and NPM 10.x.x](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/blob/main/INSTALL%20NODE%2021v.md)
+- [Mongodb install and Config](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/blob/main/INSTALL-MONGODB.md)
+- [API Files](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/tree/main/API)
 ## Application 💼
-- [Firebase CRUD App]()
-- [Hand Cricket App]()
+- [Firebase CRUD App](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/tree/main/Application/Firebase_Web_App-main)
+- [Hand Cricket App](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/tree/main/Application/HandCircket)
 
 ## [Project](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/tree/main/Project/examination-app/) 🏆 ✨
 Develop a full stack web application for conducting On-line quiz using MVC architecture. The application should facilitate the normal and admin users to access it.  To the normal user, instructions, questions with options and the score needs to be provided as the following snapshots. Admin user can view the registered users and their scores. 
