@@ -19,7 +19,7 @@
 - Test 01  [ Lab Test 01 - Full-Stack using Servlet ](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/blob/main/Lab_Test-01)
 - Test 02  [ Lab Test 02 on Full-Stack using React+Node+mongodb ](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/blob/main/Lab_Test-01)
 
-## JavaScript Practice 🖊️
+## JavaScript Practice 📋
 - Week 3 [JS Basic input, event, function, DOM](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/tree/main/JavaScript_Practice/week3)
 - Week 4 [Timmer and sliding window](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/tree/main/JavaScript_Practice/week4)
 - Week 5 [DOM Style updata and Mouse pointer](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/tree/main/JavaScript_Practice/week5)
@@ -28,7 +28,7 @@
 - [Hooks](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/blob/main/React_Practice/Hooks)
 - [ReactJS Exercise](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/blob/main/React_Practice/frontend)
 - [.excel to mongodb conversion](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/blob/main/React_Practice/e2j)
-## Node Practice 🖊️
+## Node Practice 💵
 - [Simple Server](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/blob/main/Node_Practice/Server/)
 - [MVC Arch](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/tree/main/Node_Practice/MVC-app)
 - [Event-Example](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/blob/main/Node_Practice/Event/)
@@ -38,6 +38,10 @@
 - [Install and Config MySql in Ubuntu]()
 - [Install Node 21.x and NPM 10.x.x]()
 - [Mongodb install and Config]()
+
+## Application 💼
+- [Firebase CRUD App]()
+- [Hand Cricket App]()
 
 ## [Project](https://github.com/KKBUGHUNTER/Internet-Programming-Lab/tree/main/Project/examination-app/) 🏆 ✨
 Develop a full stack web application for conducting On-line quiz using MVC architecture. The application should facilitate the normal and admin users to access it.  To the normal user, instructions, questions with options and the score needs to be provided as the following snapshots. Admin user can view the registered users and their scores. 
