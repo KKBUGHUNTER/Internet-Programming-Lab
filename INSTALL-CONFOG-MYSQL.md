@@ -38,3 +38,36 @@ Now, you should be able to log in to MySQL as the root user without using `sudo`
 mysql -u root -p
 ```
 
+
+## Uninstall Mysql 
+```bash
+sudo service mysql stop
+sudo apt-get remove --purge mysql-server mysql-client mysql-common
+sudo apt-get autoremove
+sudo apt-get autoclean
+sudo rm -rf /var/lib/mysql/
+sudo rm -rf /etc/mysql/
+```
+If in case you got this error in trying to login: 
+
+```bash
+sudo systemctl stop mysql.service
+
+sudo mkdir -p /var/run/mysqld
+sudo chown mysql:mysql /var/run/mysqld
+
+
+sudo mysqld_safe --skip-grant-tables --skip-networking &
+sudo mysql -u root
+
+```
+updating password
+`ERROR 1045(28000): Access denied for user 'root'@'localhost' (using passowrd: YES)`
+```bash
+FLUSH PRIVILEGES;
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
+exit;
+
+sudo pkill mysqld_safe
+mysql -u root -p
+```

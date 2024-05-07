@@ -37,15 +37,17 @@ async function DeleteUser(userId){
     }
 }
 
-async function updateUserScore(userId, newScore, testName) {
+async function updateUserScore(userId, newScore, testName, prevScore) {
     const mainModule = new MainModel();
     await mainModule.connect();
     const userCollection = await mainModule.getUserCollection();
-    console.log(userId, newScore, testName);
+    console.log(userId, newScore, testName, prevScore);
+    const updatedScore = prevScore + newScore;
+    console.log("Updated Score: ", updatedScore);
     try {
         await userCollection.updateOne(
             { _id: userId },
-            { $set: { score: newScore }, $addToSet: { solved: testName } } // Update score and add testName to solved array
+            { $set: { score: updatedScore }, $addToSet: { solved: testName } } // Update score and add testName to solved array
         );
     } catch (error) {
         console.log("Error updating user score:", error);

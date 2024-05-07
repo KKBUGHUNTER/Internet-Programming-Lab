@@ -45,12 +45,13 @@ exports.deleteAccount = async (req, res) => {
 };
 
 exports.updateUserScore = async (req, res) => {
-    let { userId, score, testName } = req.query; // Extract userId, score, and testName from request query parameters
+    let { userId, score, testName, prevScore } = req.query; // Extract userId, score, and testName from request query parameters
     userId = parseInt(userId);
     score = parseInt(score);
-    console.log(userId, score, testName);
+    prevScore = parseInt(prevScore);
+    console.log(userId, score, testName, prevScore);
     try {
-        await updateUserScore(userId, score, testName); // Call updateUserScore function with userId, score, and testName
+        await updateUserScore(userId, score, testName, prevScore); // Call updateUserScore function with userId, score, and testName
         return res.status(200).json({ message: "User score updated successfully" });
     } catch (error) {
         console.log("Error updating user score:", error);
